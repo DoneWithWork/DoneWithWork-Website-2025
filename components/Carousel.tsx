@@ -58,7 +58,7 @@ export default function Carousel({ projects }: { projects: Project[] }) {
       >
         <Link
           href={`/projects/${projects[activeIndex].slug?.current}`}
-          className="text-2xl font-bold"
+          className="text-2xl font-bold hover"
         >
           {projects[activeIndex].title}
         </Link>

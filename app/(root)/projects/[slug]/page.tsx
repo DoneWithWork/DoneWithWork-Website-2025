@@ -80,20 +80,19 @@ const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <p className="text-3xl">{data.icon}</p>
           <h1 className="text-4xl font-semibold  mb-4">{data.title}</h1>
         </div>
-        <p className="text-base my-3">{data.description}</p>
         <Image
           src={data.image ? urlFor(data.image).url() : ""}
           alt={data.title || ""}
           width={1200}
           height={800}
-          className="aspect-video rounded-xl shadow-sm shadow-blue-300"
+          className="object-cover aspect-video rounded-xl shadow-sm shadow-blue-300"
         />
         <p className="text-base leading-relaxed mt-2 text-gray-200">
           <span>{data.created_at}</span>{" "}
           <span className="font-bold mx-1">•</span>{" "}
           <span>{data.category?.toUpperCase()}</span>
         </p>
-        <div className="prose prose-invert mt-10">
+        <div className="prose prose-invert mt-10 max-w-full">
           <PortableText value={data.content || []} />
         </div>
       </section>

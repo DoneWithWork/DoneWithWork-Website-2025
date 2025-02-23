@@ -48,7 +48,7 @@ const Projects = async () => {
                 alt={project.title || ""}
                 width={1200}
                 height={800}
-                className="aspect-video rounded-xl shadow-sm shadow-blue-300"
+                className="object-cover aspect-video rounded-xl shadow-sm shadow-blue-300"
               />
               <p className="text-base leading-relaxed mt-2 text-gray-200">
                 <span>{project.created_at}</span>{" "}
