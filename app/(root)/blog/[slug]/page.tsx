@@ -100,7 +100,7 @@ const SingleBlog = async ({
           <span className="font-bold mx-1">•</span>{" "}
           <span>{data.category?.toUpperCase()}</span>
         </p>
-        <div className="prose prose-invert mt-10">
+        <div className="prose prose-invert mt-10 max-w-full">
           <PortableText value={data.content || []} />
         </div>
       </section>
